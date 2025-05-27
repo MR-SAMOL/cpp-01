@@ -2,14 +2,14 @@
 // 1. file open 
 // 2. red, write file
 // 3. ofstream : Create / Write
-// ifstream :Display/ red
-// fstream : Write / red
+// ifstream :Display/ read
+// fstream : Write / read
 // - ios :: app = add
 // - ios :: ate = pointer
 // - ios :: in = display
 // - ios :: out = create
-
-#include<iostream>
+//                                              OFSTREAM
+/*#include<iostream>
 #include<fstream>
 using namespace std;
 int main(){
@@ -29,6 +29,20 @@ int main(){
         file << name    <<"     "<<     id      <<"        "<<      salary      <<"         "<<     gender;
     }else{
         cout<<"Error open file"<<endl;
+    }
+    file.close();
+    return 0;
+}*/
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+    ifstream file;// ifstream is a read file
+    file.open("Example.txt");
+    string line;
+    while(getline(file,line)){
+        cout<<line<<endl;
     }
     file.close();
     return 0;
