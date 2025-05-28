@@ -6,7 +6,7 @@
 // fstream : Write / read
 // - ios :: app = add
 // - ios :: ate = pointer
-// - ios :: in = display
+// - ios :: in  = display
 // - ios :: out = create
 //                                              OFSTREAM
 /*#include<iostream>
@@ -34,14 +34,29 @@ int main(){
     return 0;
 }*/
 
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
+// int main(){
+//     ifstream file;// ifstream is a read file
+//     file.open("Example.txt");
+//     string line;
+//     while(getline(file,line)){
+//         cout<<line<<endl;
+//     }
+//     file.close();
+//     return 0;
+// }
+
 #include<iostream>
 #include<fstream>
 using namespace std;
+
 int main(){
-    ifstream file;// ifstream is a read file
-    file.open("Example.txt");
+    fstream file;
+    file.open("Example.txt",ios::in);
     string line;
-    while(getline(file,line)){
+    while (getline(file,line)){
         cout<<line<<endl;
     }
     file.close();
