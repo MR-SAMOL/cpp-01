@@ -95,10 +95,7 @@ class Book{
         }while(choose != 0);
      }
 };
-
 int main(){
     Book obj;
     obj.Menu();
-    return 0;
-
 }
