@@ -26,7 +26,7 @@ int main(){
     cout<<"Enter Gender :";cin>>gender;
     if (file){
         cout<<"File opened scuccessfully"<<endl;
-        file << name    <<"     "<<     id      <<"        "<<      salary      <<"         "<<     gender;
+        file << name     <<"     "<<     id      <<"        "<<      salary      <<"         "<<     gender;
     }else{
         cout<<"Error open file"<<endl;
     }
@@ -48,17 +48,50 @@ int main(){
 //     return 0;
 // }
 
-#include<iostream>
-#include<fstream>
-using namespace std;
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
 
-int main(){
-    fstream file;
-    file.open("Example.txt",ios::in);
-    string line;
-    while (getline(file,line)){
-        cout<<line<<endl;
+// int main(){
+//     fstream file;
+//     file.open("Example.txt",ios::in);
+//     string line;
+//     while (getline(file,line)){
+//         cout<<line<<endl;
+//     }
+//     file.close();
+//     return 0;
+// }
+
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
+
+// int main(){
+//     fstream file ("Example.txt",ios::in | ios::ate);
+//     file.seekg(0);
+//     string line;
+//     cout<<"Hello :"<<endl;
+//     while(getline(file,line)){
+
+//         cout<<line<<endl;
+//     };
+//     file.close();
+//     return 0;
+// }
+#include<iostream>
+#include <fstream>
+using namespace std; 
+
+int main() {
+    ofstream file("example.bin",ios::out | ios::binary);
+
+    if (file.is_open()) {
+        int data = 1234;
+        string name = "Hello";
+        file.write(reinterpret_cast<char*>(&data), sizeof(data));
+        file.close();
     }
-    file.close();
+
     return 0;
 }
