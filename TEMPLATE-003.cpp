@@ -32,9 +32,6 @@ int main(){
 	cout<<"\033[0;44;33mStudent Gender \033[0m  :"<<s.getData("Femal")<<endl;
 	cout<<"\033[0;45;34mStudent Grade  \033[0m  :"<<s.getData('A')<<endl;
 	cout<<"\033[0;41;35mStudent Salary \033[0m  :"<<s.getData(1500)<<endl;
-	cout<<"Teacher name   :"<<t.getImformation("YaYa")<<endl;
-	cout<<"Teacher Code   :"<<t.getImformation(875)<<endl;
-	cout<<"Teacher Gender :"<<t.getImformation('M')<<endl;
-	cout<<"Teacher Salary :"<<t.getImformation(9000)<<endl;
+	
 	return 0;
 }
